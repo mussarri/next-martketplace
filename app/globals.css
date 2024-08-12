@@ -1,33 +1,146 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  font-size: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.max-width {
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.header-rounded {
+  border-radius: 17px;
+}
+
+.input-rounded {
+  border-radius: 50px;
+}
+
+.header-bg {
+  background: linear-gradient(90deg, #C0DECE 75.5%, #83978C 88%, #83978C 95%, #83978C 95%, #68786F 100%);
+}
+
+.login-btn-bg {
+  background: linear-gradient(90deg, #93A529 23.83%, #04724D 104.33%);
+}
+
+.login-btn-bg2 {
+  background: rgba(31, 51, 44, 1);
+}
+
+.categories-bg {
+  background: linear-gradient(90deg, #FFFDD2 0%, #F4F4F4 100%);
+
+}
+
+.card-btn {
+  background: linear-gradient(90deg, #3EAEFF 0%, #04724D 100%);
+  box-shadow: 0px 4px 15px 0px rgba(45, 149, 255, 0.5);
+}
+
+.like-btn-shadow {
+  box-shadow: 0px 4px 15px 0px rgba(84, 84, 84, 0.2);
+
+}
+
+.arrow-btn {
+  background: rgba(192, 222, 206, 1);
+}
+
+.arrow-btn:hover {
+  border: 1px solid;
+  border-image-source: linear-gradient(0deg, #3EAEFF, #3EAEFF),
+    linear-gradient(0deg, rgba(96, 24, 24, 0.2), rgba(96, 24, 24, 0.2));
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.brands-bg {
+  background: rgba(88, 172, 144, 1);
+
+}
+
+.banner-shadow {
+  box-shadow: 0px 15px 26px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.brands {
+  background-image: url(../public/Rectangle\ 35.png);
+  background-size: 105% 1000%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 127px;
+  padding: 20px 35px;
+}
+
+.banner-slider {
+  padding: 0px 35px;
+  margin-top: 30px;
+}
+
+
+
+.slick-left {
+  position: absolute;
+  top: 25%;
+  left: -4%;
+  transform: translateY(-25%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.slick-right {
+  position: absolute;
+  top: 25%;
+  right: -4%;
+  transform: translateY(-25%);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+
+.slick-left svg,
+.slick-right svg {
+  fill: rgba(192, 222, 206, 1);
+
+}
+
+.slick-left circle,
+.slick-right circle {
+  stroke: #fff;
+  transition: all .4s;
+}
+
+.slick-left:hover circle,
+.slick-right:hover circle {
+  stroke: #3EAEFF;
+
+
+}
+
+.slick-left:hover svg,
+.slick-right:hover svg {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .25));
+  transition: all .4s;
+
 }
